@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "TableViewCell2", bundle: nil), forCellReuseIdentifier: "TableViewCell2")
     }
 }
-    
+    // When creating a tableview, need to conform to uitableviewdatasource and uitableviewdelegate
     extension ViewController: UITableViewDataSource, UITableViewDelegate {
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return 5
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             cell.tblImage.image = UIImage(named: String(indexPath.row + 1))
             
             //Make the label in the row tappable
-            cell.tblLabel.text = "Rainbows \(indexPath.row+1)"
+            cell.tblLabel.text = "Rainbow \(indexPath.row+1)"
             return cell
         }
     }

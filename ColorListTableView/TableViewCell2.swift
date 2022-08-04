@@ -11,6 +11,10 @@ import UIKit
 class TableViewCell2: UITableViewCell {
     
     @IBOutlet weak var tblImage: UIImageView!
-    
+   
     @IBOutlet weak var tblLabel: UILabel!
+    
+    @IBAction func onClick(_ sender: UIButton) {
+    }
+    
 }
