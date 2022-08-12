@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     
+//    @IBOutlet weak var addItem: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,21 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TableViewCell2", bundle: nil), forCellReuseIdentifier: "TableViewCell2")
     }
+    
+   
+    @IBAction func addItem(_sender: UIBarButtonItem) {
+      let item = rainbowItem
+      let newRowIndex = items.count
+
+      
+      item.text = "New Rainbow"
+      items.append(item)
+
+      let indexPath = IndexPath(row: newRowIndex, section: 0)
+      let indexPaths = [indexPath]
+      tableView.insertRows(at: indexPaths, with: .automatic)
+    }
+
 }
     // When creating a tableview, need to conform to uitableviewdatasource and uitableviewdelegate
     extension ViewController: UITableViewDataSource, UITableViewDelegate {

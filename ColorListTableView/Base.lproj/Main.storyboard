@@ -44,6 +44,7 @@
                         <barButtonItem key="rightBarButtonItem" largeContentSizeImage="addRainbow" systemItem="add" id="PCT-0N-pcD"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addItem" destination="PCT-0N-pcD" id="KDK-K3-gmU"/>
                         <outlet property="tableView" destination="1X5-A6-3HW" id="mfL-f5-QaW"/>
                     </connections>
                 </viewController>
